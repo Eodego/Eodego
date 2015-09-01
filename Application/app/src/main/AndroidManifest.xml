@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.user.application">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/applogo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".splash.SplashActivity"
+            android:theme="@style/SplashThema">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mainacvitity.MainActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".food.FoodActivity"
+            android:label="@string/foodact" />
+        <activity
+            android:name=".lodge.LodgeActivity"
+            android:label="@string/lodgeact" />
+        <activity
+            android:name=".health.HealthActivity"
+            android:label="@string/healthact" />
+        <activity
+            android:name=".performance.PerformanceActivity"
+            android:label="@string/performanceact" />
+        <activity
+            android:name=".beauty.BeautyActivity"
+            android:label="@string/beautyact" />
+        <activity
+            android:name=".course.CourseActivity"
+            android:label="@string/courseact" />
+        <activity
+            android:name=".maps.MapActivity"
+            android:label="지도" />
+        <activity
+            android:name=".food.FoodInfo"
+            android:label="맛집" />
+        <activity
+            android:name=".health.HealthInfo"
+            android:label="건강" />
+        <activity
+            android:name=".lodge.LodgeInfo"
+            android:label="숙박" />
+        <activity
+            android:name=".beauty.BeautyInfo"
+            android:label="미용" />
+        <activity
+            android:name=".performance.PerformanceInfo"
+            android:label="공연" />
+        <activity
+            android:name=".camera.MyCamera"
+            android:label="카메라" />
+        <activity
+            android:name=".mypage.MyPageActivity"
+            android:label="개인정보" />
+        <activity
+            android:name=".spectacle.SpectacleActivity"
+            android:label="볼거리" />
+        <activity
+            android:name=".event.EventActivity"
+            android:label="이벤트" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/google_maps_key" />
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+</manifest>
