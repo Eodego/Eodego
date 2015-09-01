@@ -67,6 +67,9 @@
         <activity
             android:name=".event.EventActivity"
             android:label="이벤트" />
+        <activity
+            android:name=".search.SearchActivity"
+            android:label="검색" />
 
         <meta-data
             android:name="com.google.android.gms.version"

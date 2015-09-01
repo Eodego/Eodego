@@ -54,7 +54,7 @@
         android:id="@+id/lodgerating"
         style="@style/starRatingBar"
         android:layout_width="wrap_content"
-        android:layout_height="60px"
+        android:layout_height="55px"
         android:layout_alignParentBottom="true"
         android:layout_toRightOf="@id/lodgeimg"
         android:isIndicator="true"

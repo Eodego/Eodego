@@ -110,6 +110,7 @@ public class MainActivity extends Activity {
         findViewById(R.id.camerabtn).setOnClickListener(onClick);
         findViewById(R.id.locabtn).setOnClickListener(onClick);
         findViewById(R.id.mypagebtn).setOnClickListener(onClick);
+        findViewById(R.id.searchbtn).setOnClickListener(onClick);
 
         new FoodThread(this, FoodActivity.foodList).execute();
         new BeautyThread(this, BeautyActivity.beautyList).execute();

@@ -86,7 +86,6 @@ public class FoodInfo extends Activity {
                 break;
             default:
                 break;
-
         }
     }
 
