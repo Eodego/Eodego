@@ -115,68 +115,6 @@ public class MapActivity extends FragmentActivity {
         hos = data.getHealth();
         per = data.getPerformance();
 
-        //lat 위도 lon경도 37.5062883 127.0248064
-//        double lat1 = 37.5046343;
-//        double lon1 = 127.0250319;
-////        double lat_Do1 = 37;
-////        double lat_Min1 = 29;
-////        double lat_Sec1 = 43.200000000011656;
-////
-////        double lon_Do1 = 127;
-////        double lon_Min1 = 1;
-////        double lon_Sec1 = 41.400000000023283;
-//
-//        double lat2 = 37.495332;
-//        double lon2 = 127.0283364;
-//
-//        double lat_Do1 = Math.floor(lat1);
-//        double lat_Min_temp1 = (lat1 - lat_Do1) * 60;
-//        double lat_Min1 = Math.floor(lat_Min_temp1);
-//        double lat_Sec1 = (lat_Min_temp1 - lat_Min1) * 60;
-//
-//        double lon_Do1 = Math.floor(lon1);
-//        double lon_Min_temp1 = (lon1 - lon_Do1) * 60;
-//        double lon_Min1 = Math.floor(lon_Min_temp1);
-//        double lon_Sec1 = (lon_Min_temp1 - lon_Min1) * 60;
-//
-//        double lat_Do2 = Math.floor(lat2);
-//        double lat_Min_temp2 = (lat2 - lat_Do2) * 60;
-//        double lat_Min2 = Math.floor(lat_Min_temp2);
-//        double lat_Sec2 = (lat_Min_temp2 - lat_Min2) * 60;
-//
-//        double lon_Do2 = Math.floor(lon2);
-//        double lon_Min_temp2 = (lon2 - lon_Do2) * 60;
-//        double lon_Min2 = Math.floor(lon_Min_temp2);
-//        double lon_Sec2 = (lon_Min_temp2 - lon_Min2) * 60;
-//
-//        double lat_Do = lat_Do1 - lat_Do2;
-//        double lat_Min = lat_Min1 - lat_Min2;
-//        double lat_Sec = lat_Sec1 - lat_Sec2;
-//
-//        double lon_Do = lon_Do1 - lon_Do2;
-//        double lon_Min = lon_Min1 - lon_Min2;
-//        double lon_Sec = lon_Sec1 - lon_Sec2;
-//
-//        double Dis_lat = lat_Do * 111 + lat_Min * 1.85 + lat_Sec * 0.031;
-//        double Dis_lon = lon_Do * 88.8 + lon_Min * 1.48 + lon_Sec * 0.025;
-//
-//        double Distance = Math.sqrt(Math.pow(Dis_lat, 2) + Math.pow(Dis_lon, 2));
-
-//        double distance;
-//
-//        Location locationA = new Location("A");
-//
-//        locationA.setLatitude(gps.getLatitude());
-//        locationA.setLongitude(gps.getLongitude());
-//
-//        Location locationB = new Location("B");
-//
-//        locationB.setLatitude(food.get(0).getyPos());
-//        locationB.setLongitude(food.get(0).getxPos());
-//
-//        distance = locationA.distanceTo(locationB) / 1000;
-
-
         for (int i = 0; i < food.size(); i++) {
             double distance;
 
