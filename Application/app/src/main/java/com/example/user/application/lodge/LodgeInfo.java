@@ -14,12 +14,13 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.user.application.R;
+import com.example.user.application.datamanager.Data;
 
 /**
  * Created by user on 15. 8. 20.
  */
 public class LodgeInfo extends Activity {
-    private Lodge lodge;
+    private Data lodge;
     private TextView name;
     private TextView time;
     private TextView useInfo;
@@ -109,7 +110,7 @@ public class LodgeInfo extends Activity {
             View root = inflater.inflate(R.layout.lodge_info, container, false);
 
             Intent intent = getIntent();
-            lodge = (Lodge) intent.getSerializableExtra("Item");
+            lodge = (Data) intent.getSerializableExtra("Item");
 
             name = (TextView) root.findViewById(R.id.lodgeinfoname);
             name.setText(lodge.getName());

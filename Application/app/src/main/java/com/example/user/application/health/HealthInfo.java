@@ -14,12 +14,13 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.user.application.R;
+import com.example.user.application.datamanager.Data;
 
 /**
  * Created by user on 15. 8. 16.
  */
 public class HealthInfo extends Activity {
-    private Health hospital;
+    private Data hospital;
     private TextView name;
     private TextView time;
     private TextView useInfo;
@@ -109,7 +110,7 @@ public class HealthInfo extends Activity {
             View root = inflater.inflate(R.layout.health_info, container, false);
 
             Intent intent = getIntent();
-            hospital = (Health) intent.getSerializableExtra("Item");
+            hospital = (Data) intent.getSerializableExtra("Item");
 
             name = (TextView) root.findViewById(R.id.hosinfoname);
             name.setText(hospital.getName());

@@ -14,12 +14,13 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.user.application.R;
+import com.example.user.application.datamanager.Data;
 
 /**
  * Created by user on 15. 8. 20.
  */
 public class PerformanceInfo extends Activity {
-    private Performance performance;
+    private Data performance;
     private TextView name;
     private TextView time;
     private TextView useInfo;
@@ -110,7 +111,7 @@ public class PerformanceInfo extends Activity {
             View root = inflater.inflate(R.layout.performance_info, container, false);
 
             Intent intent = getIntent();
-            performance = (Performance) intent.getSerializableExtra("Item");
+            performance = (Data) intent.getSerializableExtra("Item");
 
             name = (TextView) root.findViewById(R.id.perinfoname);
             name.setText(performance.getName());
