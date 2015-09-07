@@ -120,4 +120,5 @@ public class Data implements Serializable {
     public void setCinema(String cinema) {
         this.cinema = cinema;
     }
+
 }

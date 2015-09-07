@@ -11,10 +11,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.user.application.R;
 import com.example.user.application.datamanager.Data;
+import com.example.user.application.datamanager.DataManager;
+import com.example.user.application.datamanager.Review;
+import com.example.user.application.datamanager.ReviewData;
+
+import java.util.ArrayList;
 
 /**
  * Created by user on 15. 8. 20.
@@ -90,7 +96,23 @@ public class BeautyInfo extends Activity {
         @Nullable
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-            View root = inflater.inflate(R.layout.beauty_review, container, false);
+            DataManager data = DataManager.getInstance();
+            ArrayList<Review> review = new ArrayList<Review>();
+
+            Intent intent = getIntent();
+            Data item = (Data) intent.getSerializableExtra("Item");
+
+            for (int i = 0; i < data.getReview().size(); i++) {
+                if (item.getName().equals(data.getReview().get(i).getName()))
+                    review.add(data.getReview().get(i));
+            }
+
+            View root = inflater.inflate(R.layout.review_list, container, false);
+
+            ListView list = (ListView) root.findViewById(R.id.reviewlist);
+            ReviewData listAdapter = new ReviewData(BeautyInfo.this, R.layout.review_item, review);
+            list.setAdapter(listAdapter);
+
             return root;
         }
     }

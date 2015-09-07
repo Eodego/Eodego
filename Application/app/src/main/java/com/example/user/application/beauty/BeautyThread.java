@@ -50,11 +50,10 @@ public class BeautyThread extends AsyncTask<ArrayList<Data>, Void, ArrayList<Dat
         }
 
         for (Data entity : DTOList) {
-            beautyList.add(new Data(R.drawable.nonregistered, entity.getName(), entity.getAddr(), entity.getClcdnm(), entity.getTelno(), entity.getCinema(), entity.getxPos(), entity.getyPos()));
+            beautyList.add(new Data(R.drawable.nonregistered, entity.getName(), entity.getAddr(), entity.getClcdnm(), entity.getTelno(), entity.getxPos(), entity.getyPos()));
         }
         return beautyList;
     }
-
     @Override
     protected void onCancelled() {
         super.onCancelled();

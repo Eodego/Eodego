@@ -17,6 +17,7 @@ public class DataManager {
     private ArrayList<Data> health;
     private ArrayList<Data> per;
     private ArrayList<Data> beauty;
+    private ArrayList<Review> review;
     private final static DataManager instance = new DataManager();
 
     private DataManager() {
@@ -25,6 +26,7 @@ public class DataManager {
         health = new ArrayList<Data>();
         per = new ArrayList<Data>();
         beauty = new ArrayList<Data>();
+        review = new ArrayList<Review>();
     }
 
     public void executeThread() {
@@ -33,6 +35,7 @@ public class DataManager {
         new HealthThread(health).execute();
         new LodgeThread(lodge).execute();
         new PerformanceThread(per).execute();
+        new ReviewThread(review).execute();
     }
 
     public ArrayList<Data> getFood() {
@@ -53,6 +56,10 @@ public class DataManager {
 
     public ArrayList<Data> getPerformance() {
         return per;
+    }
+
+    public ArrayList<Review> getReview() {
+        return review;
     }
 
     public static DataManager getInstance() {
