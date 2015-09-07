@@ -12,13 +12,13 @@ import java.util.ArrayList;
  * Created by user on 15. 9. 4.
  */
 public class DataManager {
+    private final static DataManager instance = new DataManager();
     private ArrayList<Data> food;
     private ArrayList<Data> lodge;
     private ArrayList<Data> health;
     private ArrayList<Data> per;
     private ArrayList<Data> beauty;
     private ArrayList<Review> review;
-    private final static DataManager instance = new DataManager();
 
     private DataManager() {
         food = new ArrayList<Data>();
@@ -27,6 +27,10 @@ public class DataManager {
         per = new ArrayList<Data>();
         beauty = new ArrayList<Data>();
         review = new ArrayList<Review>();
+    }
+
+    public static DataManager getInstance() {
+        return instance;
     }
 
     public void executeThread() {
@@ -60,9 +64,5 @@ public class DataManager {
 
     public ArrayList<Review> getReview() {
         return review;
-    }
-
-    public static DataManager getInstance() {
-        return instance;
     }
 }

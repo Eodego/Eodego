@@ -105,12 +105,12 @@ public class Data implements Serializable {
         this.yPos = yPos;
     }
 
-    public void setStar(float star) {
-        this.star = star;
-    }
-
     public float getStar() {
         return star;
+    }
+
+    public void setStar(float star) {
+        this.star = star;
     }
 
     public String getCinema() {

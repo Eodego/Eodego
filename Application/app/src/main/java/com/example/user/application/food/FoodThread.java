@@ -1,6 +1,5 @@
 package com.example.user.application.food;
 
-import android.content.Context;
 import android.os.AsyncTask;
 
 import com.example.user.application.R;

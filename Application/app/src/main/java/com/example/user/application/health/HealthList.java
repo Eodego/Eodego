@@ -1,7 +1,6 @@
 package com.example.user.application.health;
 
 import android.content.Context;
-import android.media.Rating;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;

@@ -1,6 +1,5 @@
 package com.example.user.application.health;
 
-import android.content.Context;
 import android.os.AsyncTask;
 
 import com.example.user.application.R;

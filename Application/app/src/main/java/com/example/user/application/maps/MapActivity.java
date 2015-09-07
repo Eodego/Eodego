@@ -34,9 +34,9 @@ public class MapActivity extends FragmentActivity {
     private ArrayList<Data> per;
     private ArrayList<Data> lodge;
     private GoogleMap mMap;
-    private DataManager data;
     // Might be null if Google Play services APK is not available.
     //TextView statusText;
+    private DataManager data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +57,42 @@ public class MapActivity extends FragmentActivity {
         setUpMapIfNeeded();
         locationManager.requestLocationUpdates(provider, 2000, 10, mListener);
     }
+
+    LocationListener mListener = new LocationListener() {
+        @Override
+        public void onLocationChanged(Location location) {
+            //mMap.clear();
+            mMap.addMarker(new MarkerOptions().position(new LatLng(location.getLatitude(), location.getLongitude())).title("Marker"));
+        }
+
+        @Override
+        public void onStatusChanged(String provider, int status, Bundle extras) {
+//            String text = "";
+//
+//            switch (status) {
+//                case LocationProvider.OUT_OF_SERVICE:
+//                    text = "서비스 사용 불가";
+//                    break;
+//                case LocationProvider.TEMPORARILY_UNAVAILABLE:
+//                    text = "일시적 사용 불가";
+//                    break;
+//                case LocationProvider.AVAILABLE:
+//                    text = "서비스 사용 가능";
+//                    break;
+//            }
+//            statusText.setText(provider + " 상태 " + text);
+        }
+
+        @Override
+        public void onProviderEnabled(String provider) {
+
+        }
+
+        @Override
+        public void onProviderDisabled(String provider) {
+
+        }
+    };
 
     /**
      * Sets up the map if it is possible to do so (i.e., the Google Play services APK is correctly
@@ -203,40 +239,4 @@ public class MapActivity extends FragmentActivity {
         }
         //mMap.addCircle(new CircleOptions().center(new LatLng(gps.getLatitude(), gps.getLongitude())).radius(100).strokeColor(Color.RED).fillColor(Color.BLUE));
     }
-
-    LocationListener mListener = new LocationListener() {
-        @Override
-        public void onLocationChanged(Location location) {
-            //mMap.clear();
-            mMap.addMarker(new MarkerOptions().position(new LatLng(location.getLatitude(), location.getLongitude())).title("Marker"));
-        }
-
-        @Override
-        public void onStatusChanged(String provider, int status, Bundle extras) {
-//            String text = "";
-//
-//            switch (status) {
-//                case LocationProvider.OUT_OF_SERVICE:
-//                    text = "서비스 사용 불가";
-//                    break;
-//                case LocationProvider.TEMPORARILY_UNAVAILABLE:
-//                    text = "일시적 사용 불가";
-//                    break;
-//                case LocationProvider.AVAILABLE:
-//                    text = "서비스 사용 가능";
-//                    break;
-//            }
-//            statusText.setText(provider + " 상태 " + text);
-        }
-
-        @Override
-        public void onProviderEnabled(String provider) {
-
-        }
-
-        @Override
-        public void onProviderDisabled(String provider) {
-
-        }
-    };
 }

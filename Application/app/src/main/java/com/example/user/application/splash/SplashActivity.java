@@ -3,9 +3,7 @@ package com.example.user.application.splash;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 
-import com.example.user.application.R;
 import com.example.user.application.mainacvitity.MainActivity;
 
 /**
