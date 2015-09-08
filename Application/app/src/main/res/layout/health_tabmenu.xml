@@ -11,7 +11,7 @@
 
         <ImageButton
             android:id="@+id/healthinfobtn"
-            android:layout_width="wrap_content"
+            android:layout_width="0px"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/info_press"
@@ -20,7 +20,7 @@
 
         <ImageButton
             android:id="@+id/healthmenubtn"
-            android:layout_width="wrap_content"
+            android:layout_width="0px"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/charge_press"
@@ -29,7 +29,7 @@
 
         <ImageButton
             android:id="@+id/healthreviewbtn"
-            android:layout_width="wrap_content"
+            android:layout_width="0px"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/review_press"

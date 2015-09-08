@@ -65,6 +65,9 @@
             android:name=".spectacle.SpectacleActivity"
             android:label="볼거리" />
         <activity
+            android:name=".spectacle.SpectacleInfo"
+            android:label="관광지 정보" />
+        <activity
             android:name=".event.EventActivity"
             android:label="이벤트" />
         <activity

@@ -5,6 +5,7 @@ import com.example.user.application.food.FoodThread;
 import com.example.user.application.health.HealthThread;
 import com.example.user.application.lodge.LodgeThread;
 import com.example.user.application.performance.PerformanceThread;
+import com.example.user.application.spectacle.SpectacleThread;
 
 import java.util.ArrayList;
 
@@ -18,6 +19,7 @@ public class DataManager {
     private ArrayList<Data> health;
     private ArrayList<Data> per;
     private ArrayList<Data> beauty;
+    private ArrayList<Data> spec;
     private ArrayList<Review> review;
 
     private DataManager() {
@@ -26,6 +28,7 @@ public class DataManager {
         health = new ArrayList<Data>();
         per = new ArrayList<Data>();
         beauty = new ArrayList<Data>();
+        spec = new ArrayList<Data>();
         review = new ArrayList<Review>();
     }
 
@@ -39,6 +42,7 @@ public class DataManager {
         new HealthThread(health).execute();
         new LodgeThread(lodge).execute();
         new PerformanceThread(per).execute();
+        new SpectacleThread(spec).execute();
         new ReviewThread(review).execute();
     }
 
@@ -60,6 +64,10 @@ public class DataManager {
 
     public ArrayList<Data> getPerformance() {
         return per;
+    }
+
+    public ArrayList<Data> getSpectacle() {
+        return spec;
     }
 
     public ArrayList<Review> getReview() {

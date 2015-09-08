@@ -3,6 +3,6 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
-    <dimen name="margin">10sp</dimen>
-    <dimen name="margin2">7sp</dimen>
+    <dimen name="margin">45px</dimen>
+    <dimen name="margin2">22.5px</dimen>
 </resources>

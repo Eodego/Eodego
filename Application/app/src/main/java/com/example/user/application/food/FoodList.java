@@ -44,7 +44,7 @@ public class FoodList extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, ViewGroup parent) {/**/
         final int pos = position;
 
         if (convertView == null) {
