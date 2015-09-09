@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -20,18 +21,18 @@ import java.util.ArrayList;
 public class LodgeActivity extends Activity {
     private ArrayList<Data> lodgesList;
     private ListView listView;
-    private ProgressBar pro;
     private LodgeList listAdapter;
     private DataManager data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+
         setContentView(R.layout.list_view);
         data = DataManager.getInstance();
         lodgesList = data.getLodge();
         listView = (ListView) findViewById(R.id.listview);
-        pro = (ProgressBar) findViewById(R.id.listpro);
         listAdapter = new LodgeList(this, R.layout.list_item, lodgesList);
         listView.setAdapter(listAdapter);
         listView.setOnItemClickListener(listener);
@@ -41,9 +42,7 @@ public class LodgeActivity extends Activity {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             Intent info = new Intent(LodgeActivity.this, LodgeInfo.class);
-            Data lodge = new Data(lodgesList.get(position).getIcon(), lodgesList.get(position).getName(),
-                    lodgesList.get(position).getAddr(), lodgesList.get(position).getClcdnm(),
-                    lodgesList.get(position).getTelno(), lodgesList.get(position).getxPos(), lodgesList.get(position).getyPos());
+            Data lodge = lodgesList.get(position);
             info.putExtra("Item", lodge);
             startActivity(info);
         }

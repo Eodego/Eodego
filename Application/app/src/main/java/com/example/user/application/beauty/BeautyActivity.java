@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -21,17 +22,17 @@ public class BeautyActivity extends Activity {
     private ArrayList<Data> beautyList;
     private BeautyList listAdapter;
     private ListView listView;
-    private ProgressBar pro;
     private DataManager data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+
         setContentView(R.layout.list_view);
         data = DataManager.getInstance();
         beautyList = data.getBeauty();
         listView = (ListView) findViewById(R.id.listview);
-        pro = (ProgressBar) findViewById(R.id.listpro);
         listAdapter = new BeautyList(this, R.layout.list_item, beautyList);
         listView.setAdapter(listAdapter);
         listView.setOnItemClickListener(listener);
@@ -41,10 +42,7 @@ public class BeautyActivity extends Activity {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             Intent info = new Intent(BeautyActivity.this, BeautyInfo.class);
-            Data beauty = new Data(beautyList.get(position).getIcon(), beautyList.get(position).getName(),
-                    beautyList.get(position).getAddr(), beautyList.get(position).getClcdnm(),
-                    beautyList.get(position).getTelno(), beautyList.get(position).getCinema(),
-                    beautyList.get(position).getxPos(), beautyList.get(position).getyPos());
+            Data beauty = beautyList.get(position);
             info.putExtra("Item", beauty);
             startActivity(info);
         }

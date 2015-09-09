@@ -50,6 +50,14 @@
         android:layout_alignParentRight="true"
         android:background="@drawable/order" />
 
+    <ImageView
+        android:layout_width="100px"
+        android:layout_height="150px"
+        android:layout_alignParentRight="true"
+        android:layout_margin="30px"
+        android:background="@drawable/front"
+        android:visibility="gone" />
+
     <RatingBar
         android:id="@+id/listrating"
         style="@style/starRatingBar"
