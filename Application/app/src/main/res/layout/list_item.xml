@@ -43,14 +43,6 @@
         android:textSize="13sp" />
 
     <ImageView
-        android:id="@+id/listorder"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:background="@drawable/order" />
-
-    <ImageView
         android:layout_width="100px"
         android:layout_height="150px"
         android:layout_alignParentRight="true"
@@ -62,11 +54,43 @@
         android:id="@+id/listrating"
         style="@style/starRatingBar"
         android:layout_width="wrap_content"
-        android:layout_height="55px"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15px"
         android:layout_toRightOf="@id/listimg"
         android:isIndicator="true"
         android:numStars="5"
         android:stepSize="0.1" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="15px"
+        android:layout_marginRight="10px"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/listorder"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/order" />
+
+        <ImageView
+            android:id="@+id/listreserve"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/reserve" />
+
+        <ImageView
+            android:id="@+id/listbaedal"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/baedal" />
+    </LinearLayout>
 
 </RelativeLayout>
