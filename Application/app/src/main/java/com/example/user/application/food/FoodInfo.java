@@ -10,6 +10,7 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -41,6 +42,7 @@ public class FoodInfo extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.food_tabmenu);
 
         infobtn = (ImageButton) findViewById(R.id.foodinfobtn);
@@ -136,9 +138,13 @@ public class FoodInfo extends Activity {
 
             Intent intent = getIntent();
             food = (Data) intent.getSerializableExtra("Item");
+            ArrayList<Data> data = new ArrayList<Data>();
 
-            name = (TextView) root.findViewById(R.id.foodinfoname);
-            name.setText(food.getName());
+            data.add(food);
+
+            ListView listView = (ListView) root.findViewById(R.id.itemlist);
+            FoodList listAdapter = new FoodList(FoodInfo.this, R.layout.list_item, data);
+            listView.setAdapter(listAdapter);
 
             time = (TextView) root.findViewById(R.id.foodinfotime);
             time.setText("영업시간\n" + "10:00 ~ 24:00");

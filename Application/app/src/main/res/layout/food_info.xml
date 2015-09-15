@@ -1,70 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center|top"
     android:orientation="vertical">
 
+
     <RelativeLayout
+        android:id="@+id/relimg"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/infomagin"
+        android:layout_marginTop="@dimen/infomagin"
+        android:gravity="center">
 
-        <ImageView
-            android:id="@+id/foodinfoimg"
-            android:layout_width="250px"
-            android:layout_height="250px"
-            android:layout_margin="10dp"
-            android:background="@drawable/nonregistered" />
-
-        <TextView
-            android:id="@+id/foodinfoname"
+        <ListView
+            android:id="@+id/itemlist"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/foodinfoimg"
-            android:gravity="center"
-            android:textColor="#000000"
-            android:textSize="25dp" />
+            android:layout_height="wrap_content" />
     </RelativeLayout>
 
     <TextView
         android:id="@+id/foodinfotime"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/relimg"
         android:layout_margin="10dp"
         android:gravity="center"
         android:textColor="#000000"
-        android:textSize="25dp" />
+        android:textSize="@dimen/infosize" />
 
     <TextView
         android:id="@+id/foodinfouse"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/foodinfotime"
         android:layout_margin="10dp"
         android:gravity="center"
         android:textColor="#000000"
-        android:textSize="25dp" />
+        android:textSize="@dimen/infosize" />
 
     <LinearLayout
+        android:id="@+id/foodline"
         android:layout_width="match_parent"
         android:layout_height="5px"
-        android:background="#999999"></LinearLayout>
+        android:layout_below="@id/foodinfouse"
+        android:background="#999999"
+        android:orientation="horizontal" />
 
     <TextView
         android:id="@+id/foodinfoaddr"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/foodline"
         android:layout_margin="10dp"
         android:gravity="center"
         android:textColor="#000000"
-        android:textSize="25dp" />
+        android:textSize="@dimen/infosize" />
 
     <TextView
         android:id="@+id/foodinfotelno"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/foodinfoaddr"
         android:layout_margin="10dp"
         android:autoLink="phone"
         android:gravity="center"
         android:textColor="#000000"
-        android:textSize="25dp" />
-</LinearLayout>
+        android:textSize="@dimen/infosize" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="170px"
+            android:scaleType="centerCrop"
+            android:layout_weight="1"
+            android:background="@drawable/phone" />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="170px"
+            android:scaleType="centerCrop"
+            android:layout_weight="1"
+            android:background="@drawable/map" />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="170px"
+            android:scaleType="centerCrop"
+            android:layout_weight="1"
+            android:background="@drawable/picture" />
+    </LinearLayout>
+</RelativeLayout>

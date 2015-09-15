@@ -73,24 +73,23 @@
 
         <ImageView
             android:id="@+id/listorder"
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/order" />
+            android:layout_width="150px"
+            android:layout_height="60px"
+            android:scaleType="fitStart"
+            android:src="@drawable/order" />
 
         <ImageView
             android:id="@+id/listreserve"
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/reserve" />
+            android:layout_width="150px"
+            android:layout_height="60px"
+            android:scaleType="fitStart"
+            android:src="@drawable/reserve" />
 
         <ImageView
             android:id="@+id/listbaedal"
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/baedal" />
+            android:layout_width="150px"
+            android:layout_height="60px"
+            android:scaleType="fitStart"
+            android:src="@drawable/baedal" />
     </LinearLayout>
-
 </RelativeLayout>

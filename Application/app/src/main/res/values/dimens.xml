@@ -5,4 +5,7 @@
 
     <dimen name="margin">45px</dimen>
     <dimen name="margin2">22.5px</dimen>
+
+    <dimen name="infosize">20sp</dimen>
+    <dimen name="infomagin">50dp</dimen>
 </resources>
