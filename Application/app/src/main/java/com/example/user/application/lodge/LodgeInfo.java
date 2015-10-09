@@ -1,5 +1,6 @@
 package com.example.user.application.lodge;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -91,6 +92,7 @@ public class LodgeInfo extends Activity {
         }
     }
 
+    @SuppressLint("ValidFragment")
     class LodgeReview extends Fragment {
         @Nullable
         @Override
@@ -116,6 +118,7 @@ public class LodgeInfo extends Activity {
         }
     }
 
+    @SuppressLint("ValidFragment")
     class LodgeUse extends Fragment {
         @Nullable
         @Override
@@ -125,6 +128,7 @@ public class LodgeInfo extends Activity {
         }
     }
 
+    @SuppressLint("ValidFragment")
     class LodgeInfomation extends Fragment {
         @Nullable
         @Override

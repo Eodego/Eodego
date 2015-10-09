@@ -1,5 +1,6 @@
 package com.example.user.application.performance;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -92,6 +93,7 @@ public class PerformanceInfo extends Activity {
         }
     }
 
+    @SuppressLint("ValidFragment")
     class PerformanceReview extends Fragment {
         @Nullable
         @Override
@@ -117,6 +119,7 @@ public class PerformanceInfo extends Activity {
         }
     }
 
+    @SuppressLint("ValidFragment")
     class PerformanceMenu extends Fragment {
         @Nullable
         @Override
@@ -126,6 +129,7 @@ public class PerformanceInfo extends Activity {
         }
     }
 
+    @SuppressLint("ValidFragment")
     class PerformanceInfomation extends Fragment {
         @Nullable
         @Override

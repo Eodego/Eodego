@@ -1,5 +1,6 @@
 package com.example.user.application.beauty;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -92,6 +93,7 @@ public class BeautyInfo extends Activity {
         }
     }
 
+    @SuppressLint("ValidFragment")
     class BeautyReview extends Fragment {
         @Nullable
         @Override
@@ -117,6 +119,7 @@ public class BeautyInfo extends Activity {
         }
     }
 
+    @SuppressLint("ValidFragment")
     class BeautyMenu extends Fragment {
         @Nullable
         @Override
@@ -126,6 +129,7 @@ public class BeautyInfo extends Activity {
         }
     }
 
+    @SuppressLint("ValidFragment")
     class BeautyInfomation extends Fragment {
         @Nullable
         @Override

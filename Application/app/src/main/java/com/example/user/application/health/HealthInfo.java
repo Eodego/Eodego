@@ -1,5 +1,6 @@
 package com.example.user.application.health;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -91,6 +92,7 @@ public class HealthInfo extends Activity {
         }
     }
 
+    @SuppressLint("ValidFragment")
     class HealthReview extends Fragment {
         @Nullable
         @Override
@@ -116,6 +118,7 @@ public class HealthInfo extends Activity {
         }
     }
 
+    @SuppressLint("ValidFragment")
     class HealthUse extends Fragment {
         @Nullable
         @Override
@@ -125,6 +128,7 @@ public class HealthInfo extends Activity {
         }
     }
 
+    @SuppressLint("ValidFragment")
     class HealthInfomation extends Fragment {
         @Nullable
         @Override

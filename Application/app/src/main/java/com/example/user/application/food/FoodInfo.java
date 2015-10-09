@@ -1,5 +1,6 @@
 package com.example.user.application.food;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -96,6 +97,7 @@ public class FoodInfo extends Activity {
         }
     }
 
+    @SuppressLint("ValidFragment")
     class FoodReview extends Fragment {
         @Nullable
         @Override
@@ -121,6 +123,7 @@ public class FoodInfo extends Activity {
         }
     }
 
+    @SuppressLint("ValidFragment")
     class FoodMenu extends Fragment {
         @Nullable
         @Override
@@ -130,6 +133,7 @@ public class FoodInfo extends Activity {
         }
     }
 
+    @SuppressLint("ValidFragment")
     class FoodInfomation extends Fragment {
         @Nullable
         @Override

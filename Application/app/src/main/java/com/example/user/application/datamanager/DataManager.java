@@ -13,7 +13,7 @@ import java.util.ArrayList;
  * Created by user on 15. 9. 4.
  */
 public class DataManager {
-    private final static DataManager instance = new DataManager();
+    private static DataManager instance;
     private ArrayList<Data> food;
     private ArrayList<Data> lodge;
     private ArrayList<Data> health;
@@ -23,6 +23,7 @@ public class DataManager {
     private ArrayList<Review> review;
 
     private DataManager() {
+        instance = null;
         food = new ArrayList<Data>();
         lodge = new ArrayList<Data>();
         health = new ArrayList<Data>();
@@ -33,6 +34,11 @@ public class DataManager {
     }
 
     public static DataManager getInstance() {
+        if (instance == null) {
+            instance = new DataManager();
+            return instance;
+        }
+
         return instance;
     }
 
