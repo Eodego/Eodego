@@ -53,7 +53,7 @@ public class LodgeInfo extends Activity {
 
         infobtn.setBackground(getDrawable(R.drawable.information_click));
         FragmentTransaction tr = fragmentManager.beginTransaction();
-        LodgeInfomation li = new LodgeInfomation();
+        LodgeInformation li = new LodgeInformation();
         tr.add(R.id.lodgeframe, li, "LodgeInfo");
         tr.commit();
     }
@@ -65,7 +65,7 @@ public class LodgeInfo extends Activity {
                 menubtn.setBackground(getDrawable(R.drawable.charge));
                 reviewbtn.setBackground(getDrawable(R.drawable.review));
                 FragmentTransaction tr1 = fragmentManager.beginTransaction();
-                LodgeInfomation li = new LodgeInfomation();
+                LodgeInformation li = new LodgeInformation();
                 tr1.replace(R.id.lodgeframe, li, "LodgeInfo");
                 tr1.commit();
                 break;
@@ -129,7 +129,7 @@ public class LodgeInfo extends Activity {
     }
 
     @SuppressLint("ValidFragment")
-    class LodgeInfomation extends Fragment {
+    class LodgeInformation extends Fragment {
         @Nullable
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

@@ -55,7 +55,7 @@ public class FoodInfo extends Activity {
 
         infobtn.setBackground(getDrawable(R.drawable.information_click));
         FragmentTransaction tr = fragmentManager.beginTransaction();
-        FoodInfomation fi = new FoodInfomation();
+        FoodInformation fi = new FoodInformation();
         tr.add(R.id.foodframe, fi, "FoodInfo");
         tr.commit();
     }
@@ -68,7 +68,7 @@ public class FoodInfo extends Activity {
                 reviewbtn.setBackground(getDrawable(R.drawable.review));
 
                 FragmentTransaction tr1 = fragmentManager.beginTransaction();
-                FoodInfomation fi = new FoodInfomation();
+                FoodInformation fi = new FoodInformation();
                 tr1.replace(R.id.foodframe, fi, "FoodInfo");
                 tr1.commit();
                 break;
@@ -134,7 +134,7 @@ public class FoodInfo extends Activity {
     }
 
     @SuppressLint("ValidFragment")
-    class FoodInfomation extends Fragment {
+    class FoodInformation extends Fragment {
         @Nullable
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

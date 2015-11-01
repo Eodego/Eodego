@@ -53,7 +53,7 @@ public class BeautyInfo extends Activity {
 
         infobtn.setBackground(getDrawable(R.drawable.information_click));
         FragmentTransaction tr = fragmentManager.beginTransaction();
-        BeautyInfomation bi = new BeautyInfomation();
+        BeautyInformation bi = new BeautyInformation();
         tr.add(R.id.beautyframe, bi, "BeautyInfo");
         tr.commit();
     }
@@ -65,7 +65,7 @@ public class BeautyInfo extends Activity {
                 menubtn.setBackground(getDrawable(R.drawable.charge));
                 reviewbtn.setBackground(getDrawable(R.drawable.review));
                 FragmentTransaction tr1 = fragmentManager.beginTransaction();
-                BeautyInfomation bi = new BeautyInfomation();
+                BeautyInformation bi = new BeautyInformation();
                 tr1.replace(R.id.beautyframe, bi, "BeautyInfo");
                 tr1.commit();
                 break;
@@ -130,7 +130,7 @@ public class BeautyInfo extends Activity {
     }
 
     @SuppressLint("ValidFragment")
-    class BeautyInfomation extends Fragment {
+    class BeautyInformation extends Fragment {
         @Nullable
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

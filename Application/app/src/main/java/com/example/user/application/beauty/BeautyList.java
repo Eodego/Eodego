@@ -18,10 +18,10 @@ import java.util.ArrayList;
  * Created by user on 15. 8. 15.
  */
 public class BeautyList extends BaseAdapter {
-    Context maincon;
-    LayoutInflater inflater;
-    ArrayList<Data> beautysList;
-    int layout;
+    private Context maincon;
+    private LayoutInflater inflater;
+    private ArrayList<Data> beautysList;
+    private int layout;
 
     public BeautyList(Context context, int layout, ArrayList<Data> beautysList) {
         this.maincon = context;

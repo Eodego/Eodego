@@ -28,8 +28,8 @@ public class BeautyActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-
         setContentView(R.layout.list_view);
+
         data = DataManager.getInstance();
         beautyList = data.getBeauty();
         listView = (ListView) findViewById(R.id.listview);

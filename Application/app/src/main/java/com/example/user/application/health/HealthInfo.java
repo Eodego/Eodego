@@ -53,7 +53,7 @@ public class HealthInfo extends Activity {
 
         infobtn.setBackground(getDrawable(R.drawable.information_click));
         FragmentTransaction tr = fragmentManager.beginTransaction();
-        HealthInfomation hi = new HealthInfomation();
+        HealthInformation hi = new HealthInformation();
         tr.add(R.id.healthframe, hi, "HospitalInfo");
         tr.commit();
     }
@@ -65,7 +65,7 @@ public class HealthInfo extends Activity {
                 menubtn.setBackground(getDrawable(R.drawable.charge));
                 reviewbtn.setBackground(getDrawable(R.drawable.review));
                 FragmentTransaction tr1 = fragmentManager.beginTransaction();
-                HealthInfomation hi = new HealthInfomation();
+                HealthInformation hi = new HealthInformation();
                 tr1.replace(R.id.healthframe, hi, "HospitalInfo");
                 tr1.commit();
                 break;
@@ -129,7 +129,7 @@ public class HealthInfo extends Activity {
     }
 
     @SuppressLint("ValidFragment")
-    class HealthInfomation extends Fragment {
+    class HealthInformation extends Fragment {
         @Nullable
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

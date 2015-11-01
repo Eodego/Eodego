@@ -1,120 +1,84 @@
 package com.example.user.application.mainacvitity;
 
 import android.app.Activity;
-import android.content.Intent;
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
-import android.widget.Button;
+import android.widget.ListView;
 
 import com.example.user.application.R;
-import com.example.user.application.beauty.BeautyActivity;
-import com.example.user.application.camera.MyCamera;
-import com.example.user.application.course.CourseActivity;
+import com.example.user.application.beauty.BeautyList;
+import com.example.user.application.datamanager.Data;
 import com.example.user.application.datamanager.DataManager;
-import com.example.user.application.event.EventActivity;
-import com.example.user.application.food.FoodActivity;
-import com.example.user.application.health.HealthActivity;
-import com.example.user.application.lodge.LodgeActivity;
-import com.example.user.application.maps.MapActivity;
-import com.example.user.application.mypage.MyPageActivity;
-import com.example.user.application.performance.PerformanceActivity;
-import com.example.user.application.search.SearchActivity;
-import com.example.user.application.spectacle.SpectacleActivity;
+
+import java.util.ArrayList;
 
 public class MainActivity extends Activity {
-    DataManager data;
+    private FragmentManager fragmentManager;
+    private Fragment fragment;
+    private DataManager data;
+    private ArrayList<Data> allData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
+
         init();
+
+        FragmentTransaction tr1 = fragmentManager.beginTransaction();
+        MainView mainView = new MainView();
+        tr1.replace(R.id.mainlistview, mainView, "AllData");
+        tr1.commit();
+    }
+
+    class MainView extends Fragment {
+        private BeautyList listAdapter;
+        private ListView listView;
+
+        @Nullable
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+            View root = inflater.inflate(R.layout.list_view, container, false);
+
+            listView = (ListView) root.findViewById(R.id.listview);
+            listAdapter = new BeautyList(MainActivity.this, R.layout.list_item, allData);
+            listView.setAdapter(listAdapter);
+
+            return root;
+        }
     }
 
     public void init() {
-//        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-//        StrictMode.setThreadPolicy(policy);
-
-        findViewById(R.id.food).setOnClickListener(onClick);
-        findViewById(R.id.lodge).setOnClickListener(onClick);
-        findViewById(R.id.health).setOnClickListener(onClick);
-        findViewById(R.id.performance).setOnClickListener(onClick);
-        findViewById(R.id.course).setOnClickListener(onClick);
-        findViewById(R.id.beauty).setOnClickListener(onClick);
-        findViewById(R.id.spectacle).setOnClickListener(onClick);
-        findViewById(R.id.event).setOnClickListener(onClick);
-        findViewById(R.id.homebtn).setOnClickListener(onClick);
-        findViewById(R.id.searchbtn).setOnClickListener(onClick);
-        findViewById(R.id.camerabtn).setOnClickListener(onClick);
-        findViewById(R.id.locabtn).setOnClickListener(onClick);
-        findViewById(R.id.mypagebtn).setOnClickListener(onClick);
-        findViewById(R.id.searchbtn).setOnClickListener(onClick);
-
         data = DataManager.getInstance();
-        data.executeThread();
-    }
 
-    Button.OnClickListener onClick = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            switch (v.getId()) {
-                case R.id.food:
-                    Intent foodIntent = new Intent(MainActivity.this, FoodActivity.class);
-                    startActivity(foodIntent);
-                    break;
-                case R.id.lodge:
-                    Intent lodgeIntent = new Intent(MainActivity.this, LodgeActivity.class);
-                    startActivity(lodgeIntent);
-                    break;
-                case R.id.beauty:
-                    Intent beautyIntent = new Intent(MainActivity.this, BeautyActivity.class);
-                    startActivity(beautyIntent);
-                    break;
-                case R.id.health:
-                    Intent healthIntent = new Intent(MainActivity.this, HealthActivity.class);
-                    startActivity(healthIntent);
-                    break;
-                case R.id.performance:
-                    Intent performanceIntent = new Intent(MainActivity.this, PerformanceActivity.class);
-                    startActivity(performanceIntent);
-                    break;
-                case R.id.course:
-                    Intent courseIntent = new Intent(MainActivity.this, CourseActivity.class);
-                    startActivity(courseIntent);
-                    break;
-                case R.id.spectacle:
-                    Intent specIntent = new Intent(MainActivity.this, SpectacleActivity.class);
-                    startActivity(specIntent);
-                    break;
-                case R.id.event:
-                    Intent eventIntent = new Intent(MainActivity.this, EventActivity.class);
-                    startActivity(eventIntent);
-                    break;
-                case R.id.locabtn:
-                    Intent mapsIntent = new Intent(MainActivity.this, MapActivity.class);
-                    startActivity(mapsIntent);
-                    break;
-                case R.id.camerabtn:
-                    Intent cameraIntent = new Intent(MainActivity.this, MyCamera.class);
-                    startActivity(cameraIntent);
-                    break;
-                case R.id.mypagebtn:
-                    Intent mypageIntent = new Intent(MainActivity.this, MyPageActivity.class);
-                    startActivity(mypageIntent);
-                    break;
-                case R.id.searchbtn:
-                    Intent searchIntent = new Intent(MainActivity.this, SearchActivity.class);
-                    startActivity(searchIntent);
-                    break;
-                default:
-                    break;
-            }
-        }
-    };
+        fragmentManager = getFragmentManager();
+        fragment = fragmentManager.findFragmentById(R.id.mainlistview);
+
+        allData = new ArrayList<Data>();
+
+        for (int i = 0; i < data.getBeauty().size(); i++)
+            allData.add(data.getBeauty().get(i));
+        for (int i = 0; i < data.getFood().size(); i++)
+            allData.add(data.getFood().get(i));
+        for (int i = 0; i < data.getHealth().size(); i++)
+            allData.add(data.getHealth().get(i));
+        for (int i = 0; i < data.getLodge().size(); i++)
+            allData.add(data.getLodge().get(i));
+        for (int i = 0; i < data.getPerformance().size(); i++)
+            allData.add(data.getPerformance().get(i));
+        for (int i = 0; i < data.getSpectacle().size(); i++)
+            allData.add(data.getSpectacle().get(i));
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

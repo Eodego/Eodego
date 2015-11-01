@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/info_press"
-            android:onClick="perClick"
+            android:onClick="spectacleClick"
             android:text="정보" />
 
         <ImageButton
@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/charge_press"
-            android:onClick="perClick"
+            android:onClick="spectacleClick"
             android:text="공연정보" />
 
         <ImageButton
@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/review_press"
-            android:onClick="perClick"
+            android:onClick="spectacleClick"
             android:text="리뷰" />
     </LinearLayout>
 

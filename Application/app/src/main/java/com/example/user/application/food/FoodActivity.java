@@ -31,40 +31,40 @@ public class FoodActivity extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.list_view);
 
-        LinearLayout imgView = (LinearLayout) findViewById(R.id.listimg);
-        ImageButton[] imgBtn = new ImageButton[9];
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-                0, LinearLayout.LayoutParams.WRAP_CONTENT, 1);
-
-        for (int i = 0; i < imgBtn.length; i++)
-            imgBtn[i] = new ImageButton(this);
-
-        imgBtn[0].setBackgroundResource(R.drawable.all);
-        imgBtn[1].setBackgroundResource(R.drawable.koreafood);
-        imgBtn[2].setBackgroundResource(R.drawable.japanfood);
-        imgBtn[3].setBackgroundResource(R.drawable.chinafood);
-        imgBtn[4].setBackgroundResource(R.drawable.down);
-//        imgBtn[5].setBackgroundResource(R.drawable.boonsik);
-//        imgBtn[6].setBackgroundResource(R.drawable.cafe);
-//        imgBtn[7].setBackgroundResource(R.drawable.restaurant);
-//        imgBtn[8].setBackgroundResource(R.drawable.pizza);
-
-        for (int i = 0; i < 5; i++) {
-            imgView.addView(imgBtn[i], params);
-        }
-
-//        TextView[] text = new TextView[str.length];
+//        LinearLayout imgView = (LinearLayout) findViewById(R.id.listimg);
+//        ImageButton[] imgBtn = new ImageButton[9];
 //        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
 //                0, LinearLayout.LayoutParams.WRAP_CONTENT, 1);
 //
-//        for (int i = 0; i < text.length; i++) {
-//            text[i] = new TextView(this);
-//            text[i].setText(str[i]);
-//            text[i].setGravity(Gravity.CENTER);
-//            text[i].setBackgroundColor(Color.WHITE);
-//            text[i].setTextSize(TypedValue.COMPLEX_UNIT_PX, 60f);
-//            textView.addView(text[i], params);
+//        for (int i = 0; i < imgBtn.length; i++)
+//            imgBtn[i] = new ImageButton(this);
+//
+//        imgBtn[0].setBackgroundResource(R.drawable.all);
+//        imgBtn[1].setBackgroundResource(R.drawable.koreafood);
+//        imgBtn[2].setBackgroundResource(R.drawable.japanfood);
+//        imgBtn[3].setBackgroundResource(R.drawable.chinafood);
+//        imgBtn[4].setBackgroundResource(R.drawable.down);
+////        imgBtn[5].setBackgroundResource(R.drawable.boonsik);
+////        imgBtn[6].setBackgroundResource(R.drawable.cafe);
+////        imgBtn[7].setBackgroundResource(R.drawable.restaurant);
+////        imgBtn[8].setBackgroundResource(R.drawable.pizza);
+//
+//        for (int i = 0; i < 5; i++) {
+//            imgView.addView(imgBtn[i], params);
 //        }
+//
+////        TextView[] text = new TextView[str.length];
+////        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+////                0, LinearLayout.LayoutParams.WRAP_CONTENT, 1);
+////
+////        for (int i = 0; i < text.length; i++) {
+////            text[i] = new TextView(this);
+////            text[i].setText(str[i]);
+////            text[i].setGravity(Gravity.CENTER);
+////            text[i].setBackgroundColor(Color.WHITE);
+////            text[i].setTextSize(TypedValue.COMPLEX_UNIT_PX, 60f);
+////            textView.addView(text[i], params);
+////        }
 
         data = DataManager.getInstance();
         foodList = data.getFood();

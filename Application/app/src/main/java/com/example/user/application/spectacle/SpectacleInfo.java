@@ -53,19 +53,19 @@ public class SpectacleInfo extends Activity {
 
         infobtn.setBackground(getDrawable(R.drawable.information_click));
         FragmentTransaction tr = fragmentManager.beginTransaction();
-        PerformanceInfomation pi = new PerformanceInfomation();
+        SpectacleInformation pi = new SpectacleInformation();
         tr.add(R.id.specframe, pi, "SpectacleInfo");
         tr.commit();
     }
 
-    public void perClick(View v) {
+    public void spectacleClick(View v) {
         switch (v.getId()) {
             case R.id.specinfobtn:
                 infobtn.setBackground(getDrawable(R.drawable.information_click));
                 menubtn.setBackground(getDrawable(R.drawable.charge));
                 reviewbtn.setBackground(getDrawable(R.drawable.review));
                 FragmentTransaction tr1 = fragmentManager.beginTransaction();
-                PerformanceInfomation pi = new PerformanceInfomation();
+                SpectacleInformation pi = new SpectacleInformation();
                 tr1.replace(R.id.specframe, pi, "SpectacleInfo");
                 tr1.commit();
                 break;
@@ -74,7 +74,7 @@ public class SpectacleInfo extends Activity {
                 menubtn.setBackground(getDrawable(R.drawable.charge_click));
                 reviewbtn.setBackground(getDrawable(R.drawable.review));
                 FragmentTransaction tr2 = fragmentManager.beginTransaction();
-                PerformanceMenu pm = new PerformanceMenu();
+                SpectacleMenu pm = new SpectacleMenu();
                 tr2.replace(R.id.specframe, pm, "SpectacleMenu");
                 tr2.commit();
                 break;
@@ -83,7 +83,7 @@ public class SpectacleInfo extends Activity {
                 menubtn.setBackground(getDrawable(R.drawable.charge));
                 reviewbtn.setBackground(getDrawable(R.drawable.review_click));
                 FragmentTransaction tr3 = fragmentManager.beginTransaction();
-                PerformanceReview pr = new PerformanceReview();
+                SpectacleReview pr = new SpectacleReview();
                 tr3.replace(R.id.specframe, pr, "SpectacleReview");
                 tr3.commit();
                 break;
@@ -93,7 +93,7 @@ public class SpectacleInfo extends Activity {
     }
 
     @SuppressLint("ValidFragment")
-    class PerformanceReview extends Fragment {
+    class SpectacleReview extends Fragment {
         @Nullable
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -119,7 +119,7 @@ public class SpectacleInfo extends Activity {
     }
 
     @SuppressLint("ValidFragment")
-    class PerformanceMenu extends Fragment {
+    class SpectacleMenu extends Fragment {
         @Nullable
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -129,7 +129,7 @@ public class SpectacleInfo extends Activity {
     }
 
     @SuppressLint("ValidFragment")
-    class PerformanceInfomation extends Fragment {
+    class SpectacleInformation extends Fragment {
         @Nullable
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

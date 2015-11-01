@@ -24,8 +24,8 @@ public class BeautyThread extends AsyncTask<ArrayList<Data>, Void, ArrayList<Dat
     }
 
     @Override
-    protected void onPostExecute(ArrayList<Data> foods) {
-        super.onPostExecute(foods);
+    protected void onPostExecute(ArrayList<Data> datas) {
+        super.onPostExecute(datas);
     }
 
     @Override
@@ -34,8 +34,8 @@ public class BeautyThread extends AsyncTask<ArrayList<Data>, Void, ArrayList<Dat
     }
 
     @Override
-    protected void onCancelled(ArrayList<Data> foods) {
-        super.onCancelled(foods);
+    protected void onCancelled(ArrayList<Data> datas) {
+        super.onCancelled(datas);
     }
 
     @Override

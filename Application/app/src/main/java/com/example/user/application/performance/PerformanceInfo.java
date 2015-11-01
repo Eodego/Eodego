@@ -53,7 +53,7 @@ public class PerformanceInfo extends Activity {
 
         infobtn.setBackground(getDrawable(R.drawable.information_click));
         FragmentTransaction tr = fragmentManager.beginTransaction();
-        PerformanceInfomation pi = new PerformanceInfomation();
+        PerformanceInformation pi = new PerformanceInformation();
         tr.add(R.id.perframe, pi, "PerformanceInfo");
         tr.commit();
     }
@@ -65,7 +65,7 @@ public class PerformanceInfo extends Activity {
                 menubtn.setBackground(getDrawable(R.drawable.charge));
                 reviewbtn.setBackground(getDrawable(R.drawable.review));
                 FragmentTransaction tr1 = fragmentManager.beginTransaction();
-                PerformanceInfomation pi = new PerformanceInfomation();
+                PerformanceInformation pi = new PerformanceInformation();
                 tr1.replace(R.id.perframe, pi, "PerformanceInfo");
                 tr1.commit();
                 break;
@@ -130,7 +130,7 @@ public class PerformanceInfo extends Activity {
     }
 
     @SuppressLint("ValidFragment")
-    class PerformanceInfomation extends Fragment {
+    class PerformanceInformation extends Fragment {
         @Nullable
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
