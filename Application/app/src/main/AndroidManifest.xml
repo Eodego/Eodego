@@ -17,23 +17,17 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".datamanager.DataInfo"
+            android:label="정보" />
+        <activity
             android:name=".mainacvitity.MainActivity"
             android:label="@string/app_name" />
         <activity
             android:name=".food.FoodActivity"
             android:label="@string/foodact" />
         <activity
-            android:name=".lodge.LodgeActivity"
-            android:label="@string/lodgeact" />
-        <activity
-            android:name=".health.HealthActivity"
-            android:label="@string/healthact" />
-        <activity
             android:name=".performance.PerformanceActivity"
             android:label="@string/performanceact" />
-        <activity
-            android:name=".beauty.BeautyActivity"
-            android:label="@string/beautyact" />
         <activity
             android:name=".course.CourseActivity"
             android:label="@string/courseact" />
@@ -41,35 +35,8 @@
             android:name=".maps.MapActivity"
             android:label="지도" />
         <activity
-            android:name=".food.FoodInfo"
-            android:label="맛집" />
-        <activity
-            android:name=".health.HealthInfo"
-            android:label="건강" />
-        <activity
-            android:name=".lodge.LodgeInfo"
-            android:label="숙박" />
-        <activity
-            android:name=".beauty.BeautyInfo"
-            android:label="미용" />
-        <activity
-            android:name=".performance.PerformanceInfo"
-            android:label="공연" />
-        <activity
-            android:name=".camera.MyCamera"
-            android:label="카메라" />
-        <activity
-            android:name=".mypage.MyPageActivity"
-            android:label="개인정보" />
-        <activity
             android:name=".spectacle.SpectacleActivity"
             android:label="볼거리" />
-        <activity
-            android:name=".spectacle.SpectacleInfo"
-            android:label="관광지 정보" />
-        <activity
-            android:name=".event.EventActivity"
-            android:label="이벤트" />
         <activity
             android:name=".search.SearchActivity"
             android:label="검색" />
@@ -90,8 +57,4 @@
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.CAMERA" />
-
-    <uses-feature android:name="android.hardware.camera" />
-    <uses-feature android:name="android.hardware.camera.autofocus" />
 </manifest>

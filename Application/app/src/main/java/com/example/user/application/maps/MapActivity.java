@@ -146,9 +146,6 @@ public class MapActivity extends FragmentActivity {
         mMap.addMarker(new MarkerOptions().position(new LatLng(gps.getLatitude(), gps.getLongitude())).title("MY"));
 
         food = data.getFood();
-        lodge = data.getLodge();
-        beauty = data.getBeauty();
-        hos = data.getHealth();
         per = data.getPerformance();
 
         for (int i = 0; i < food.size(); i++) {

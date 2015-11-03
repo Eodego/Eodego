@@ -11,6 +11,7 @@ import android.widget.ProgressBar;
 
 import com.example.user.application.R;
 import com.example.user.application.datamanager.Data;
+import com.example.user.application.datamanager.DataInfo;
 import com.example.user.application.datamanager.DataManager;
 
 import java.util.ArrayList;
@@ -41,9 +42,9 @@ public class SpectacleActivity extends Activity {
     public AdapterView.OnItemClickListener listener = new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            Intent info = new Intent(SpectacleActivity.this, SpectacleInfo.class);
-            Data spec = specList.get(position);
-            info.putExtra("Item", spec);
+            Intent info = new Intent(SpectacleActivity.this, DataInfo.class);
+            Data data = specList.get(position);
+            info.putExtra("Item", data);
             startActivity(info);
         }
     };

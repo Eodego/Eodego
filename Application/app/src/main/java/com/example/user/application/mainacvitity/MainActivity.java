@@ -5,19 +5,18 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
-import android.widget.ListView;
+import android.widget.Button;
 
 import com.example.user.application.R;
-import com.example.user.application.beauty.BeautyList;
 import com.example.user.application.datamanager.Data;
 import com.example.user.application.datamanager.DataManager;
+import com.example.user.application.food.FoodView;
+import com.example.user.application.performance.EnjoyView;
+import com.example.user.application.spectacle.SpectacleView;
 
 import java.util.ArrayList;
 
@@ -35,27 +34,9 @@ public class MainActivity extends Activity {
 
         init();
 
-        FragmentTransaction tr1 = fragmentManager.beginTransaction();
-        MainView mainView = new MainView();
-        tr1.replace(R.id.mainlistview, mainView, "AllData");
-        tr1.commit();
-    }
-
-    class MainView extends Fragment {
-        private BeautyList listAdapter;
-        private ListView listView;
-
-        @Nullable
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-            View root = inflater.inflate(R.layout.list_view, container, false);
-
-            listView = (ListView) root.findViewById(R.id.listview);
-            listAdapter = new BeautyList(MainActivity.this, R.layout.list_item, allData);
-            listView.setAdapter(listAdapter);
-
-            return root;
-        }
+        FragmentTransaction tr = fragmentManager.beginTransaction();
+        AllView allView = new AllView(this, allData);
+        tr.replace(R.id.mainlistview, allView).commit();
     }
 
     public void init() {
@@ -64,21 +45,48 @@ public class MainActivity extends Activity {
         fragmentManager = getFragmentManager();
         fragment = fragmentManager.findFragmentById(R.id.mainlistview);
 
+        findViewById(R.id.all).setOnClickListener(listener);
+        findViewById(R.id.food).setOnClickListener(listener);
+        findViewById(R.id.spectacle).setOnClickListener(listener);
+        findViewById(R.id.enjoy).setOnClickListener(listener);
+
         allData = new ArrayList<Data>();
 
-        for (int i = 0; i < data.getBeauty().size(); i++)
-            allData.add(data.getBeauty().get(i));
         for (int i = 0; i < data.getFood().size(); i++)
             allData.add(data.getFood().get(i));
-        for (int i = 0; i < data.getHealth().size(); i++)
-            allData.add(data.getHealth().get(i));
-        for (int i = 0; i < data.getLodge().size(); i++)
-            allData.add(data.getLodge().get(i));
         for (int i = 0; i < data.getPerformance().size(); i++)
             allData.add(data.getPerformance().get(i));
         for (int i = 0; i < data.getSpectacle().size(); i++)
             allData.add(data.getSpectacle().get(i));
     }
+
+    Button.OnClickListener listener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            switch (v.getId()) {
+                case R.id.all:
+                    FragmentTransaction tr1 = fragmentManager.beginTransaction();
+                    AllView allView = new AllView(MainActivity.this, allData);
+                    tr1.replace(R.id.mainlistview, allView).commit();
+                    break;
+                case R.id.food:
+                    FragmentTransaction tr2 = fragmentManager.beginTransaction();
+                    FoodView foodView = new FoodView(MainActivity.this, data.getFood());
+                    tr2.replace(R.id.mainlistview, foodView).commit();
+                    break;
+                case R.id.enjoy:
+                    FragmentTransaction tr3 = fragmentManager.beginTransaction();
+                    EnjoyView enjoyView = new EnjoyView(MainActivity.this, data.getPerformance());
+                    tr3.replace(R.id.mainlistview, enjoyView).commit();
+                    break;
+                case R.id.spectacle:
+                    FragmentTransaction tr4 = fragmentManager.beginTransaction();
+                    SpectacleView spectacleView = new SpectacleView(MainActivity.this, data.getSpectacle());
+                    tr4.replace(R.id.mainlistview, spectacleView).commit();
+                    break;
+            }
+        }
+    };
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

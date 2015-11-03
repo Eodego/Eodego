@@ -13,20 +13,54 @@
         android:background="#ffffff"
         android:gravity="center"
         android:text="정릉동"
-        android:textSize="60px" />
+        android:textSize="30sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="3px"
+        android:layout_height="1dp"
         android:layout_weight="0"
         android:background="#eaeaea"
         android:orientation="vertical" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/all"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="전체" />
+
+        <Button
+            android:id="@+id/food"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="먹거리" />
+
+        <Button
+            android:id="@+id/spectacle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="볼거리" />
+
+        <Button
+            android:id="@+id/enjoy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="놀거리" />
+    </LinearLayout>
+
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="0px"
+        android:layout_height="0dp"
         android:layout_gravity="center"
-        android:layout_weight="5.5">
+        android:layout_weight="6">
 
         <ImageView
             android:id="@+id/logo"
@@ -38,7 +72,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="3px"
+        android:layout_height="1dp"
         android:layout_weight="0"
         android:background="#eaeaea"
         android:orientation="vertical" />
@@ -47,76 +81,5 @@
         android:id="@+id/mainlistview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="13.5" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="3px"
-        android:layout_weight="0"
-        android:background="#eaeaea"
-        android:orientation="horizontal" />
-
-    <LinearLayout
-        android:id="@+id/menu"
-        android:layout_width="match_parent"
-        android:layout_height="0px"
-        android:layout_marginBottom="10px"
-        android:layout_marginTop="10px"
-        android:layout_weight="1.5">
-
-        <ImageButton
-            android:id="@+id/homebtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5px"
-            android:layout_marginLeft="80px"
-            android:layout_marginRight="40px"
-            android:layout_marginTop="5px"
-            android:layout_weight="1"
-            android:background="@drawable/home_press" />
-
-        <ImageButton
-            android:id="@+id/searchbtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5px"
-            android:layout_marginLeft="40px"
-            android:layout_marginRight="40px"
-            android:layout_marginTop="5px"
-            android:layout_weight="1"
-            android:background="@drawable/search_press" />
-
-        <ImageButton
-            android:id="@+id/camerabtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5px"
-            android:layout_marginLeft="40px"
-            android:layout_marginRight="40px"
-            android:layout_marginTop="5px"
-            android:layout_weight="1"
-            android:background="@drawable/camera_press" />
-
-        <ImageButton
-            android:id="@+id/locabtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5px"
-            android:layout_marginLeft="40px"
-            android:layout_marginRight="40px"
-            android:layout_marginTop="5px"
-            android:layout_weight="1"
-            android:background="@drawable/location_press" />
-
-        <ImageButton
-            android:id="@+id/mypagebtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5px"
-            android:layout_marginLeft="40px"
-            android:layout_marginRight="80px"
-            android:layout_marginTop="5px"
-            android:layout_weight="1"
-            android:background="@drawable/mypage_press" />
-    </LinearLayout>
+        android:layout_weight="13" />
 </LinearLayout>

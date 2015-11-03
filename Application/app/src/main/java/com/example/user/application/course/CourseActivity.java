@@ -15,11 +15,8 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.example.user.application.R;
-import com.example.user.application.beauty.BeautyList;
 import com.example.user.application.datamanager.DataManager;
 import com.example.user.application.food.FoodList;
-import com.example.user.application.health.HealthList;
-import com.example.user.application.lodge.LodgeList;
 import com.example.user.application.performance.PerformanceList;
 
 /**
@@ -40,7 +37,7 @@ public class CourseActivity extends Activity {
     public void init() {
         data = DataManager.getInstance();
         fragmentManager = getFragmentManager();
-        fragment = fragmentManager.findFragmentById(R.id.foodframe);
+        fragment = fragmentManager.findFragmentById(R.id.dataframe);
 
         FragmentTransaction fvf = fragmentManager.beginTransaction();
         FoodView fv = new FoodView();
@@ -55,24 +52,6 @@ public class CourseActivity extends Activity {
                 FoodView fv = new FoodView();
                 fvf.replace(R.id.courseframe, fv, "FoodView");
                 fvf.commit();
-                break;
-            case R.id.hosview:
-                FragmentTransaction hvf = fragmentManager.beginTransaction();
-                HospitalView hv = new HospitalView();
-                hvf.replace(R.id.courseframe, hv, "HospitalView");
-                hvf.commit();
-                break;
-            case R.id.lodgeview:
-                FragmentTransaction lvf = fragmentManager.beginTransaction();
-                LodgeView lv = new LodgeView();
-                lvf.replace(R.id.courseframe, lv, "LodgeView");
-                lvf.commit();
-                break;
-            case R.id.beautyview:
-                FragmentTransaction bvf = fragmentManager.beginTransaction();
-                BeautyView bv = new BeautyView();
-                bvf.replace(R.id.courseframe, bv, "BeautyView");
-                bvf.commit();
                 break;
             case R.id.perview:
                 FragmentTransaction pvf = fragmentManager.beginTransaction();
@@ -99,32 +78,6 @@ public class CourseActivity extends Activity {
         }
     }
 
-    class HospitalView extends Fragment {
-        @Nullable
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-            View root = inflater.inflate(R.layout.list_view, container, false);
-            ListView listView = (ListView) root.findViewById(R.id.listview);
-            HealthList listAdapter = new HealthList(CourseActivity.this, R.layout.list_item, data.getHealth());
-            listView.setAdapter(listAdapter);
-            listView.setOnItemClickListener(Click);
-            return root;
-        }
-    }
-
-    class LodgeView extends Fragment {
-        @Nullable
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-            View root = inflater.inflate(R.layout.list_view, container, false);
-            ListView listView = (ListView) root.findViewById(R.id.listview);
-            LodgeList listAdapter = new LodgeList(CourseActivity.this, R.layout.list_item, data.getLodge());
-            listView.setAdapter(listAdapter);
-            listView.setOnItemClickListener(Click);
-            return root;
-        }
-    }
-
     class PerformanceView extends Fragment {
         @Nullable
         @Override
@@ -132,19 +85,6 @@ public class CourseActivity extends Activity {
             View root = inflater.inflate(R.layout.list_view, container, false);
             ListView listView = (ListView) root.findViewById(R.id.listview);
             PerformanceList listAdapter = new PerformanceList(CourseActivity.this, R.layout.list_item, data.getPerformance());
-            listView.setAdapter(listAdapter);
-            listView.setOnItemClickListener(Click);
-            return root;
-        }
-    }
-
-    class BeautyView extends Fragment {
-        @Nullable
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-            View root = inflater.inflate(R.layout.list_view, container, false);
-            ListView listView = (ListView) root.findViewById(R.id.listview);
-            BeautyList listAdapter = new BeautyList(CourseActivity.this, R.layout.list_item, data.getBeauty());
             listView.setAdapter(listAdapter);
             listView.setOnItemClickListener(Click);
             return root;

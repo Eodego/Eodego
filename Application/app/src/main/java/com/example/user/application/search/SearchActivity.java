@@ -51,10 +51,7 @@ public class SearchActivity extends Activity {
             LinearLayout parent = (LinearLayout) findViewById(R.id.searchparent);
 
             searchArrayList(data.getFood());
-            searchArrayList(data.getBeauty());
-            searchArrayList(data.getHealth());
             searchArrayList(data.getPerformance());
-            searchArrayList(data.getLodge());
 
             switch (v.getId()) {
                 case R.id.findbtn:
