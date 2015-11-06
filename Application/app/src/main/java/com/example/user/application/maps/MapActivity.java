@@ -28,11 +28,9 @@ public class MapActivity extends FragmentActivity {
     private String provider;
     private GPSInfo gps;
     private Criteria criteria;
-    private ArrayList<Data> hos;
     private ArrayList<Data> food;
-    private ArrayList<Data> beauty;
     private ArrayList<Data> per;
-    private ArrayList<Data> lodge;
+    private ArrayList<Data> spectacle;
     private GoogleMap mMap;
     // Might be null if Google Play services APK is not available.
     //TextView statusText;
@@ -124,7 +122,7 @@ public class MapActivity extends FragmentActivity {
             criteria.setAltitudeRequired(false);
             criteria.setCostAllowed(false);
             provider = locationManager.getBestProvider(criteria, true);
-            if (gps.isGetLocation() == false) {
+            if (!gps.isGetLocation()) {
                 gps.showSettingsAlert();
             }
             // Check if we were successful in obtaining the map.
@@ -142,82 +140,21 @@ public class MapActivity extends FragmentActivity {
      */
     private void setUpMap() {
         mMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(gps.getLatitude(), gps.getLongitude())));
-        mMap.animateCamera(CameraUpdateFactory.zoomTo(14));
+        mMap.animateCamera(CameraUpdateFactory.zoomTo(12));
         mMap.addMarker(new MarkerOptions().position(new LatLng(gps.getLatitude(), gps.getLongitude())).title("MY"));
 
         food = data.getFood();
         per = data.getPerformance();
+        spectacle = data.getSpectacle();
 
-        for (int i = 0; i < food.size(); i++) {
-            double distance;
+        computeDistance(food);
+        computeDistance(per);
+        computeDistance(spectacle);
+        //mMap.addCircle(new CircleOptions().center(new LatLng(gps.getLatitude(), gps.getLongitude())).radius(100).strokeColor(Color.RED).fillColor(Color.BLUE));
+    }
 
-            Location locationA = new Location("A");
-
-            locationA.setLatitude(gps.getLatitude());
-            locationA.setLongitude(gps.getLongitude());
-
-            Location locationB = new Location("B");
-
-            locationB.setLatitude(food.get(i).getyPos());
-            locationB.setLongitude(food.get(i).getxPos());
-
-            distance = locationA.distanceTo(locationB) / 1000;
-
-            if (distance < 10)
-                mMap.addMarker(new MarkerOptions().position(new LatLng(food.get(i).getyPos(), food.get(i).getxPos())).title(food.get(i).getName()));
-        }
-        for (int i = 0; i < lodge.size(); i++) {
-            double distance;
-
-            Location locationA = new Location("A");
-
-            locationA.setLatitude(gps.getLatitude());
-            locationA.setLongitude(gps.getLongitude());
-
-            Location locationB = new Location("B");
-
-            locationB.setLatitude(lodge.get(i).getyPos());
-            locationB.setLongitude(lodge.get(i).getxPos());
-
-            distance = locationA.distanceTo(locationB) / 1000;
-            if (distance < 10)
-                mMap.addMarker(new MarkerOptions().position(new LatLng(lodge.get(i).getyPos(), lodge.get(i).getxPos())).title(lodge.get(i).getName()));
-        }
-        for (int i = 0; i < beauty.size(); i++) {
-            double distance;
-
-            Location locationA = new Location("A");
-
-            locationA.setLatitude(gps.getLatitude());
-            locationA.setLongitude(gps.getLongitude());
-
-            Location locationB = new Location("B");
-
-            locationB.setLatitude(beauty.get(i).getyPos());
-            locationB.setLongitude(beauty.get(i).getxPos());
-
-            distance = locationA.distanceTo(locationB) / 1000;
-            if (distance < 10)
-                mMap.addMarker(new MarkerOptions().position(new LatLng(beauty.get(i).getyPos(), beauty.get(i).getxPos())).title(beauty.get(i).getName()));
-        }
-        for (int i = 0; i < hos.size(); i++) {
-            double distance;
-
-            Location locationA = new Location("A");
-
-            locationA.setLatitude(gps.getLatitude());
-            locationA.setLongitude(gps.getLongitude());
-
-            Location locationB = new Location("B");
-
-            locationB.setLatitude(hos.get(i).getyPos());
-            locationB.setLongitude(hos.get(i).getxPos());
-
-            distance = locationA.distanceTo(locationB) / 1000;
-            if (distance < 10)
-                mMap.addMarker(new MarkerOptions().position(new LatLng(hos.get(i).getyPos(), hos.get(i).getxPos())).title(hos.get(i).getName()));
-        }
-        for (int i = 0; i < per.size(); i++) {
+    private void computeDistance(ArrayList<Data> data) {
+        for (int i = 0; i < data.size(); i++) {
             double distance;
 
             Location locationA = new Location("A");
@@ -232,8 +169,7 @@ public class MapActivity extends FragmentActivity {
 
             distance = locationA.distanceTo(locationB) / 1000;
             if (distance < 10)
-                mMap.addMarker(new MarkerOptions().position(new LatLng(per.get(i).getyPos(), per.get(i).getxPos())).title(per.get(i).getName()));
+                mMap.addMarker(new MarkerOptions().position(new LatLng(data.get(i).getyPos(), data.get(i).getxPos())).title(data.get(i).getName()));
         }
-        //mMap.addCircle(new CircleOptions().center(new LatLng(gps.getLatitude(), gps.getLongitude())).radius(100).strokeColor(Color.RED).fillColor(Color.BLUE));
     }
 }

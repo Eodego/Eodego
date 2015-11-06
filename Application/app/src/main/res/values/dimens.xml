@@ -8,4 +8,6 @@
 
     <dimen name="infosize">20sp</dimen>
     <dimen name="infomagin">50dp</dimen>
+
+    <dimen name="menu_height">35dp</dimen>
 </resources>

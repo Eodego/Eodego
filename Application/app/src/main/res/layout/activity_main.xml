@@ -8,8 +8,7 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="0px"
-        android:layout_weight="2"
+        android:layout_height="40dp"
         android:background="#ffffff"
         android:gravity="center"
         android:text="정릉동"
@@ -27,33 +26,45 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button
+        <ImageButton
             android:id="@+id/all"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/menu_height"
             android:layout_weight="1"
-            android:text="전체" />
+            android:background="@drawable/all"
+            android:scaleType="fitCenter" />
 
-        <Button
+        <ImageButton
             android:id="@+id/food"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/menu_height"
             android:layout_weight="1"
-            android:text="먹거리" />
+            android:background="@drawable/food"
+            android:scaleType="fitCenter" />
 
-        <Button
+        <ImageButton
             android:id="@+id/spectacle"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/menu_height"
             android:layout_weight="1"
-            android:text="볼거리" />
+            android:background="@drawable/spectacle"
+            android:scaleType="fitCenter" />
 
-        <Button
+        <ImageButton
             android:id="@+id/enjoy"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/menu_height"
             android:layout_weight="1"
-            android:text="놀거리" />
+            android:background="@drawable/enjoy"
+            android:scaleType="fitCenter" />
+
+        <ImageButton
+            android:id="@+id/bookmark"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/menu_height"
+            android:layout_weight="1"
+            android:background="@drawable/bookmark"
+            android:scaleType="fitCenter" />
     </LinearLayout>
 
     <FrameLayout
@@ -82,4 +93,43 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="13" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/home"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/home_press" />
+
+        <ImageButton
+            android:id="@+id/browse"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/browse_press" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/home_press" />
+
+        <ImageButton
+            android:id="@+id/location"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/location_press" />
+
+        <ImageButton
+            android:id="@+id/mypage"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/mypage_press" />
+    </LinearLayout>
 </LinearLayout>

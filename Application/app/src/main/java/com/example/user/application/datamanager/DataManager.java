@@ -16,6 +16,7 @@ public class DataManager {
     private ArrayList<Data> food;
     private ArrayList<Data> per;
     private ArrayList<Data> spec;
+    private ArrayList<Data> bookmark;
     private ArrayList<Review> review;
 
     private DataManager() {
@@ -23,6 +24,7 @@ public class DataManager {
         food = new ArrayList<Data>();
         per = new ArrayList<Data>();
         spec = new ArrayList<Data>();
+        bookmark = new ArrayList<Data>();
         review = new ArrayList<Review>();
     }
 
@@ -40,6 +42,7 @@ public class DataManager {
         new PerformanceThread(per).execute();
         new SpectacleThread(spec).execute();
         new ReviewThread(review).execute();
+//        new BookMarkThread(bookmark).execute();
     }
 
     public ArrayList<Data> getFood() {
@@ -52,6 +55,10 @@ public class DataManager {
 
     public ArrayList<Data> getSpectacle() {
         return spec;
+    }
+
+    public ArrayList<Data> getBookmark() {
+        return bookmark;
     }
 
     public ArrayList<Review> getReview() {
