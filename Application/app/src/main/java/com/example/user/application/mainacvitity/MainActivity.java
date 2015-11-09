@@ -31,11 +31,6 @@ public class MainActivity extends Activity {
         DataManager data = DataManager.getInstance();
         ViewPager pager = (ViewPager) findViewById(R.id.pager);
 
-//        findViewById(R.id.all).setOnClickListener(type);
-//        findViewById(R.id.food).setOnClickListener(type);
-//        findViewById(R.id.spectacle).setOnClickListener(type);
-//        findViewById(R.id.enjoy).setOnClickListener(type);
-//        findViewById(R.id.bookmark).setOnClickListener(type);
         findViewById(R.id.home).setOnClickListener(staticMenu);
         findViewById(R.id.browse).setOnClickListener(staticMenu);
         findViewById(R.id.location).setOnClickListener(staticMenu);
