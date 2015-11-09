@@ -11,8 +11,8 @@ import android.widget.ListView;
 
 import com.example.user.application.R;
 import com.example.user.application.datamanager.Data;
+import com.example.user.application.datamanager.DataList;
 import com.example.user.application.datamanager.DataManager;
-import com.example.user.application.food.FoodList;
 
 import java.util.ArrayList;
 
@@ -57,7 +57,7 @@ public class SearchActivity extends Activity {
                 case R.id.findbtn:
                     View root = View.inflate(SearchActivity.this, R.layout.search_view, parent);
                     ListView listView = (ListView) root.findViewById(R.id.searchlist);
-                    FoodList listAdapter = new FoodList(SearchActivity.this, R.layout.list_item, searchData);
+                    DataList listAdapter = new DataList(SearchActivity.this, R.layout.list_item, searchData);
                     listView.setAdapter(listAdapter);
                     break;
                 default:

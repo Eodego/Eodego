@@ -16,7 +16,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.user.application.R;
-import com.example.user.application.food.FoodList;
 import com.example.user.application.review.Review;
 import com.example.user.application.review.ReviewData;
 
@@ -142,7 +141,7 @@ public class DataInfo extends Activity {
             dataList.add(DataInfo.this.data);
 
             ListView listView = (ListView) root.findViewById(R.id.itemlist);
-            FoodList listAdapter = new FoodList(DataInfo.this, R.layout.list_item, dataList);
+            DataList listAdapter = new DataList(DataInfo.this, R.layout.list_item, dataList);
             listView.setAdapter(listAdapter);
 
             time = (TextView) root.findViewById(R.id.datainfotime);

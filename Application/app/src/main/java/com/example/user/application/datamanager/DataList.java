@@ -1,4 +1,4 @@
-package com.example.user.application.spectacle;
+package com.example.user.application.datamanager;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,34 +10,31 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.example.user.application.R;
-import com.example.user.application.datamanager.Data;
 
 import java.util.ArrayList;
 
 /**
  * Created by user on 15. 8. 15.
  */
-public class SpectacleList extends BaseAdapter {
-    Context maincon;
-    LayoutInflater inflater;
-    ArrayList<Data> specList;
-    int layout;
+public class DataList extends BaseAdapter {
+    private LayoutInflater inflater;
+    private ArrayList<Data> foodsList;
+    private int layout;
 
-    public SpectacleList(Context context, int layout, ArrayList<Data> performancesList) {
-        this.maincon = context;
+    public DataList(Context context, int layout, ArrayList<Data> foodsList) {
         this.layout = layout;
-        this.specList = performancesList;
+        this.foodsList = foodsList;
         this.inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     @Override
     public int getCount() {
-        return specList.size();
+        return foodsList.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return specList.get(position).getName();
+        return foodsList.get(position).getName();
     }
 
     @Override
@@ -53,22 +50,22 @@ public class SpectacleList extends BaseAdapter {
             convertView = inflater.inflate(layout, parent, false);
         }
         ImageView img = (ImageView) convertView.findViewById(R.id.listimg);
-        img.setImageResource(specList.get(position).getIcon());
+        img.setImageResource(foodsList.get(position).getIcon());
 
         TextView name = (TextView) convertView.findViewById(R.id.listname);
-        name.setText(specList.get(position).getName());
+        name.setText(foodsList.get(position).getName());
 
         TextView addr = (TextView) convertView.findViewById(R.id.listaddr);
-        addr.setText(specList.get(position).getAddr());
+        addr.setText(foodsList.get(position).getAddr());
 
         TextView clcdnm = (TextView) convertView.findViewById(R.id.listclcdnm);
-        clcdnm.setText(specList.get(position).getClcdnm());
+        clcdnm.setText(foodsList.get(position).getClcdnm());
 
         ImageView order = (ImageView) convertView.findViewById(R.id.listorder);
-//        order.setImageResource(performancesList.get(position).getIcon());
+//        order.setImageResource(foodsList.get(position).getIcon());
 
         RatingBar star = (RatingBar) convertView.findViewById(R.id.listrating);
-        star.setRating(specList.get(position).getStar());
+        star.setRating(foodsList.get(position).getStar());
 
         return convertView;
     }

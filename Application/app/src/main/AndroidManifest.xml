@@ -23,20 +23,11 @@
             android:name=".mainacvitity.MainActivity"
             android:label="@string/app_name" />
         <activity
-            android:name=".food.FoodActivity"
-            android:label="@string/foodact" />
-        <activity
-            android:name=".performance.PerformanceActivity"
-            android:label="@string/performanceact" />
-        <activity
             android:name=".course.CourseActivity"
             android:label="@string/courseact" />
         <activity
             android:name=".maps.MapActivity"
             android:label="지도" />
-        <activity
-            android:name=".spectacle.SpectacleActivity"
-            android:label="볼거리" />
         <activity
             android:name=".search.SearchActivity"
             android:label="검색" />

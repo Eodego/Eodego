@@ -1,4 +1,4 @@
-package com.example.user.application.food;
+package com.example.user.application.bookmark;
 
 import android.app.Fragment;
 import android.content.Context;
@@ -14,20 +14,20 @@ import android.widget.ListView;
 import com.example.user.application.R;
 import com.example.user.application.datamanager.Data;
 import com.example.user.application.datamanager.DataInfo;
-import com.example.user.application.food.FoodList;
+import com.example.user.application.datamanager.DataList;
 
 import java.util.ArrayList;
 
 /**
- * Created by bw on 15. 11. 3.
+ * Created by bw on 15. 11. 6.
  */
-public class FoodView extends Fragment {
-    private FoodList listAdapter;
+public class BookMarkView extends Fragment {
+    private DataList listAdapter;
     private ListView listView;
     private Context context;
     private ArrayList<Data> dataList;
 
-    public FoodView(Context context, ArrayList<Data> dataList) {
+    public BookMarkView(Context context, ArrayList<Data> dataList) {
         this.context = context;
         this.dataList = dataList;
     }
@@ -38,7 +38,7 @@ public class FoodView extends Fragment {
         View root = inflater.inflate(R.layout.list_view, container, false);
 
         listView = (ListView) root.findViewById(R.id.listview);
-        listAdapter = new FoodList(context, R.layout.list_item, dataList);
+        listAdapter = new DataList(context, R.layout.list_item, dataList);
         listView.setAdapter(listAdapter);
         listView.setOnItemClickListener(listener);
 
