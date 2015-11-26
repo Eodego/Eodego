@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF" >
+
+    <TextView
+        android:id="@+id/signin_inflate_3_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="20dp"
+        android:text="연락처 정보 입력"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/signin_inflate_3_guide_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="간단한 정보 입력으로\n더 많은 혜택을 받으실 수 있습니다."
+        android:textColor="#BBBCBB"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/signin_inflate_3_et_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center"
+        android:hint="연락처"
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border_whitebox"
+        android:padding="8dp" />
+    
+    <Button
+        android:id="@+id/signin_inflate_3_phone_but"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="인증받기"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border_but"
+        android:padding="10dp" />
+
+   
+    
+    <RelativeLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal">
+        
+        
+   <ImageView
+        android:id="@+id/signin_inflate_3_next_but"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/btn_signin" />
+   
+   <TextView
+       android:id="@+id/signin_next_tv"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textColor="#FFFFFF"
+       android:textSize="15sp"
+       android:textStyle="bold"
+       android:layout_centerInParent="true"
+       android:text="가입완료" />
+        
+    </RelativeLayout>
+
+    
+
+</LinearLayout>

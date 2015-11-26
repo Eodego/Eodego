@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "D:\\GitHub\\Eodego\\eodego\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\border_menu_box.xml",
+        "source": "D:\\GitHub\\Eodego\\eodego\\app\\src\\main\\res\\drawable-hdpi\\border_menu_box.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Eodego\\eodego\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\border_bottom_box.xml",
+        "source": "D:\\GitHub\\Eodego\\eodego\\app\\src\\main\\res\\drawable-hdpi\\border_bottom_box.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Eodego\\eodego\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\border_but_on.xml",
+        "source": "D:\\GitHub\\Eodego\\eodego\\app\\src\\main\\res\\drawable-hdpi\\border_but_on.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Eodego\\eodego\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\border_menu_box_selected.xml",
+        "source": "D:\\GitHub\\Eodego\\eodego\\app\\src\\main\\res\\drawable-hdpi\\border_menu_box_selected.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Eodego\\eodego\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\border_whitebox.xml",
+        "source": "D:\\GitHub\\Eodego\\eodego\\app\\src\\main\\res\\drawable-hdpi\\border_whitebox.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Eodego\\eodego\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\border_contents_box_selected.xml",
+        "source": "D:\\GitHub\\Eodego\\eodego\\app\\src\\main\\res\\drawable-hdpi\\border_contents_box_selected.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Eodego\\eodego\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\progress_custom.xml",
+        "source": "D:\\GitHub\\Eodego\\eodego\\app\\src\\main\\res\\drawable-hdpi\\progress_custom.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Eodego\\eodego\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_launcher.png",
+        "source": "D:\\GitHub\\Eodego\\eodego\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\GitHub\\Eodego\\eodego\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\border_contents_box.xml",
+        "source": "D:\\GitHub\\Eodego\\eodego\\app\\src\\main\\res\\drawable-hdpi\\border_contents_box.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Eodego\\eodego\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\border_but.xml",
+        "source": "D:\\GitHub\\Eodego\\eodego\\app\\src\\main\\res\\drawable-hdpi\\border_but.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Eodego\\eodego\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\border_review_list_button_box.xml",
+        "source": "D:\\GitHub\\Eodego\\eodego\\app\\src\\main\\res\\drawable-hdpi\\border_review_list_button_box.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Eodego\\eodego\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\border_but_off.xml",
+        "source": "D:\\GitHub\\Eodego\\eodego\\app\\src\\main\\res\\drawable-hdpi\\border_but_off.xml"
+    }
+]

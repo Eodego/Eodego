@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/home_contents_review_list_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp" >
+
+        <ImageView
+            android:id="@+id/home_contents_review_list_profile_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/review_profile_test"
+            android:layout_gravity="center_vertical"
+             />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/home_contents_review_list_id_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="eodego"
+                    android:textSize="12sp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/home_contents_review_list_position_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="라인스토어"
+                    android:textSize="12sp"
+                    android:textColor="#05C9C9"
+                    android:layout_alignParentRight="true" />
+
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/home_contents_review_list_point_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5.0"
+                    android:textSize="12sp"
+                    android:textColor="#05C9C9"
+                    android:layout_centerVertical="true"/>
+                
+                <ProgressBar
+                    android:id="@+id/home_contents_review_list_progress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/home_contents_review_list_point_tv"
+                    android:max="100"
+                    android:maxWidth="100dp"
+                    android:minHeight="10dp"
+                    android:minWidth="100dp"
+                    android:progress="100"
+                    android:progressDrawable="@drawable/progress_custom" />
+
+                <TextView
+                    android:layout_toRightOf="@+id/home_contents_review_list_progress"
+                    android:id="@+id/home_contents_review_list_time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1시간 전"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="10sp"
+                    android:textColor="#CECECE"
+                    android:layout_centerVertical="true" />
+                
+                <TextView
+                    android:id="@+id/home_contents_review_list_position_address_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="신사동"
+                    android:textSize="12sp"
+                    android:textColor="#000000"
+                    android:layout_alignParentRight="true" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_below="@+id/home_contents_review_list_title_layout"
+        android:id="@+id/home_contents_review_list_picture_iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/review_test"
+        android:scaleType="fitCenter" />
+
+    <LinearLayout
+        android:id="@+id/home_contents_review_list_but_layout"
+        android:layout_below="@+id/home_contents_review_list_picture_iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="10"
+        android:layout_margin="10dp" >
+
+        <ImageView
+            android:id="@+id/home_contents_review_list_reply_but"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_review_list_reply"
+            android:layout_weight="3"
+            android:layout_gravity="center"
+            android:background="@drawable/border_review_list_button_box" />
+        
+        <ImageView 
+            android:id="@+id/home_contents_review_list_like_but"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_review_list_like"
+            android:layout_weight="3"
+            android:layout_gravity="center"
+            android:background="@drawable/border_review_list_button_box" />
+        
+        <ImageView
+            android:id="@+id/home_contents_review_list_position_but"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_review_list_position"
+            android:layout_weight="3"
+            android:layout_gravity="center"
+            android:background="@drawable/border_review_list_button_box" />
+        
+        <ImageView
+            android:id="@+id/home_contents_review_list_etc_but"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_review_list_etc"
+            android:layout_weight="1"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_below="@+id/home_contents_review_list_but_layout"
+        android:id="@+id/home_contents_review_list_review_more_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="댓글 7개 펼쳐보기"
+        android:layout_margin="10dp"
+        android:textSize="15sp"
+        android:textColor="#CECECE" />
+
+</RelativeLayout>

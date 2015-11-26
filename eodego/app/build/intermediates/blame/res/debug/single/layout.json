@@ -1,0 +1,58 @@
+[
+    {
+        "merged": "D:\\GitHub\\Eodego\\eodego\\app\\build\\intermediates\\res\\merged\\debug\\layout\\signin_inflate_layout_2.xml",
+        "source": "D:\\GitHub\\Eodego\\eodego\\app\\src\\main\\res\\layout\\signin_inflate_layout_2.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Eodego\\eodego\\app\\build\\intermediates\\res\\merged\\debug\\layout\\home_list.xml",
+        "source": "D:\\GitHub\\Eodego\\eodego\\app\\src\\main\\res\\layout\\home_list.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Eodego\\eodego\\app\\build\\intermediates\\res\\merged\\debug\\layout\\home_contents_review_layout.xml",
+        "source": "D:\\GitHub\\Eodego\\eodego\\app\\src\\main\\res\\layout\\home_contents_review_layout.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Eodego\\eodego\\app\\build\\intermediates\\res\\merged\\debug\\layout\\home_fragment.xml",
+        "source": "D:\\GitHub\\Eodego\\eodego\\app\\src\\main\\res\\layout\\home_fragment.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Eodego\\eodego\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main_activity.xml",
+        "source": "D:\\GitHub\\Eodego\\eodego\\app\\src\\main\\res\\layout\\main_activity.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Eodego\\eodego\\app\\build\\intermediates\\res\\merged\\debug\\layout\\signin_inflate_layout_3.xml",
+        "source": "D:\\GitHub\\Eodego\\eodego\\app\\src\\main\\res\\layout\\signin_inflate_layout_3.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Eodego\\eodego\\app\\build\\intermediates\\res\\merged\\debug\\layout\\home_contents_info_layout.xml",
+        "source": "D:\\GitHub\\Eodego\\eodego\\app\\src\\main\\res\\layout\\home_contents_info_layout.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Eodego\\eodego\\app\\build\\intermediates\\res\\merged\\debug\\layout\\home_contents_menu_layout.xml",
+        "source": "D:\\GitHub\\Eodego\\eodego\\app\\src\\main\\res\\layout\\home_contents_menu_layout.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Eodego\\eodego\\app\\build\\intermediates\\res\\merged\\debug\\layout\\home_contents_review_list.xml",
+        "source": "D:\\GitHub\\Eodego\\eodego\\app\\src\\main\\res\\layout\\home_contents_review_list.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Eodego\\eodego\\app\\build\\intermediates\\res\\merged\\debug\\layout\\signin_inflate_layout_1.xml",
+        "source": "D:\\GitHub\\Eodego\\eodego\\app\\src\\main\\res\\layout\\signin_inflate_layout_1.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Eodego\\eodego\\app\\build\\intermediates\\res\\merged\\debug\\layout\\logo_activity.xml",
+        "source": "D:\\GitHub\\Eodego\\eodego\\app\\src\\main\\res\\layout\\logo_activity.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Eodego\\eodego\\app\\build\\intermediates\\res\\merged\\debug\\layout\\home_contents_menu_grid.xml",
+        "source": "D:\\GitHub\\Eodego\\eodego\\app\\src\\main\\res\\layout\\home_contents_menu_grid.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Eodego\\eodego\\app\\build\\intermediates\\res\\merged\\debug\\layout\\home_contents_activity.xml",
+        "source": "D:\\GitHub\\Eodego\\eodego\\app\\src\\main\\res\\layout\\home_contents_activity.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Eodego\\eodego\\app\\build\\intermediates\\res\\merged\\debug\\layout\\signin_activity.xml",
+        "source": "D:\\GitHub\\Eodego\\eodego\\app\\src\\main\\res\\layout\\signin_activity.xml"
+    }
+]
